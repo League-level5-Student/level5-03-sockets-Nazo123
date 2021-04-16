@@ -1,6 +1,9 @@
 package _01_Intro_To_Sockets.client;
 
 import java.net.*;
+
+import javax.swing.JOptionPane;
+
 import java.io.*;
 
 public class ClientGreeter {
@@ -8,15 +11,9 @@ public class ClientGreeter {
    public static void main(String [] args) {
 	  //1. Create a String for the ip address of the server. 
 	  // If you don't know how to find a computer's ip address, ask about ifconfig on linux/mac and ipconfig on windows.
-      String ip = "";
-	try {
-		ip = InetAddress.getLocalHost().getHostAddress();
-	} catch (UnknownHostException e1) {
-		// TODO Auto-generated catch block
-System.out.println("Failed To Find IP");
-	};
+      String ip = JOptionPane.showInputDialog("What is the IP you are connecting to?");
       //2. Create an integer for the server's port number
-      int port = 1;
+      int port = Integer.parseInt(JOptionPane.showInputDialog("What is the port you are connecting to?"));
       //3. Surround steps 4-9 in a try-catch block that catches any IOExceptions.
     try {
     	 //4. Create an object of the Socket class. When initializing the object, pass in the ip address and the port number
