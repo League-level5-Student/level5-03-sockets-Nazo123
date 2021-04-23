@@ -9,6 +9,7 @@ import java.io.*;
 public class ClientGreeter {
 
    public static void main(String [] args) {
+	   
 	  //1. Create a String for the ip address of the server. 
 	  // If you don't know how to find a computer's ip address, ask about ifconfig on linux/mac and ipconfig on windows.
       String ip = JOptionPane.showInputDialog("What is the IP you are connecting to?");
@@ -27,7 +28,7 @@ DataOutputStream a = new DataOutputStream(sock.getOutputStream());
          //8. Use the DataInputStream object to print a message from the server using the readUTF() method.
          System.out.println(e.readUTF());
          //9. Close the client's server object
-         
+         sock.close();
     }catch(Exception e) {
     	
     }

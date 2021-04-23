@@ -17,7 +17,7 @@ public class ButtonClicker extends JFrame {
 	public static void main(String[] args) {
 		new ButtonClicker();
 	}
-	
+
 	public ButtonClicker(){
 		
 		int response = JOptionPane.showConfirmDialog(null, "Would you like to host a connection?", "Buttons!", JOptionPane.YES_NO_OPTION);
